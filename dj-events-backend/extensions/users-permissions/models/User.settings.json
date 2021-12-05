@@ -58,10 +58,6 @@
       "via": "users",
       "plugin": "users-permissions",
       "configurable": false
-    },
-    "events": {
-      "via": "user",
-      "collection": "events"
     }
   }
 }

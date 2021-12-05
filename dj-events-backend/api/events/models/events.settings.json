@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "events",
   "info": {
-    "name": "events"
+    "name": "Events"
   },
   "options": {
     "increments": true,
@@ -47,9 +47,12 @@
       "required": false
     },
     "user": {
-      "plugin": "users-permissions",
-      "model": "user",
-      "via": "events"
+      "via": "events",
+      "model": "events"
+    },
+    "events": {
+      "via": "user",
+      "collection": "events"
     }
   }
 }
