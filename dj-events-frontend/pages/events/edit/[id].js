@@ -1,4 +1,5 @@
 import moment from 'moment'
+import cookie from 'cookie'
 import { FaImage } from 'react-icons/fa'
 import { toast } from 'react-toastify'
 import { useState } from 'react'
@@ -177,10 +178,10 @@ export default function EditEventPage({ evt }) {
   )
 }
 
-export async function getServerSideProps({ params: { id } }) {
+export async function getServerSideProps({ params: { id }, req }) {
   const res = await fetch(`${API_URL}/events/${id}`)
   const evt = await res.json()
-
+  console.log(cookie.parse(req.headers.cookie).token)
   return {
     props: {
       evt,
