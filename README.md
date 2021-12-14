@@ -1,3 +1,5 @@
+## Next.js & Strapi fullstack musical events management system
+
 <a align="center" href="https://dj-events-frontend-henna.vercel.app/">Live Demo</a>
 
 <br/>
